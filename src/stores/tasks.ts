@@ -1,15 +1,16 @@
-// stores/counter.js
 import { defineStore } from "pinia"
+import { ROUTE_PATH } from "../utils/routes"
 
-export const useCounterStore = defineStore("counter", {
+export const useTasksStore = defineStore("tasks", {
     state: () => {
-        return { count: 0 }
+        return { tasks: [] }
     },
-    // також може бути визначений як
-    // state: () => ({ count: 0 })
+    getters: {
+        getTasks: state => state.tasks,
+    },
     actions: {
-        increment() {
-            this.count++
+        setTask(newTask) {
+            this.tasks.push(newTask)
         },
     },
 })
