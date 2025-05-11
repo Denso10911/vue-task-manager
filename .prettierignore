@@ -1,0 +1,14 @@
+.gitignore
+.prettierignore
+.prettierrc
+index.html
+package.json
+package-lock.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+node_modules
+.vscode
+.idea
